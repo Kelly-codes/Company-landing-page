@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sola | Frontend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* BODY */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            min-height: 100vh;
+            z-index: 1;
+        }
+
+        /* BACKGROUND IMAGE WITH REDUCED OPACITY */
+        body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgb(217, 217, 218); /* Test with a color first */
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+        /* CONTAINER */
+       
+        .container {
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+        url("logo.png") center/500px no-repeat fixed;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.hero {
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+        url("logo.png") center/500px no-repeat fixed;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 60px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+}
+        /* HEADINGS */
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        .gradient-text {
+            font-size: 32px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #2d155f, #67a0f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* BUTTON */
+        button {
+            background: linear-gradient(135deg, #2e0b6a, #528ddf);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project-card {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+
+        nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+  nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: rgb(36, 11, 118);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card {
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #2e0b6a, #528ddf);
+      color: azure;
+      padding: 6px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      
+    }
+    .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+    .image {
+            margin-bottom: 20px;
+            border: none;
+            height: auto;
+            max-width: 100%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .image:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .contact-info {
+    display: flex;
+    align-items: center; /* vertically center */
+    gap: 10px; /* space between logo and text */
+}
+
+.email-icon {
+    width: 25px;
+    height: 25px;
+}
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #2d155f;
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.about {
+    background: #f8f9fc;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero">
+        <h1 class="gradient-text">Hi, I'm James Kelly</h1>
+        </div>
+      
+    </section>
+    <!-- ABOUT SECTION -->
+    <main class="container">
+    <section id="fend">
+        <h2 class="gradient-text">Frontend Web Developer</h2>
+
+        <p>I build responsive business websites and high-converting landing pages.</p>
+        <button>View My Work</button>
+        </section>
+        
+        <section id="about">
+        <h2 class="gradient-text">About Me</h2>
+        <p>I am a frontend developer skilled in HTML, CSS, and JavaScript. I focus on building clean, responsive, and user-friendly websites for businesses and brands.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2 class="gradient-text">My Skills</h2>
+        <ul>
+          <li class="card">HTML5</li>
+            <li class="card">CSS3</li>
+            <li class="card">JavaScript</li>
+            <li class="card">Responsive Design</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="gradient-text">Projects</h2>
+            <h3>Business Website</h3>  
+            <img class="image" src="sample.jpg" alt="Business Website Screenshot">
+            <img class="image" src="sample2.jpg" alt="Business Website Screenshot2">
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="project-card">
+            <h2 class="gradient-text">Contact Me</h2>
+    
+            <div class="contact-info">
+                <img src="emaillogo.png" class="email-icon">
+                <p> <a href="mailto:kellytikni@email.com">
+                    kellytikni@email.com
+                  </a></p>
+            </div>
+    
+        </div>
+    </section>
+    
+
+</div>
+
+</body>
+</html>
